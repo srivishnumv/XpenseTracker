@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-                                Toast.makeText(MainActivity.this,"Sign in success",Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(MainActivity.this,DashboardActivity.class));
 
                             }
                         })
