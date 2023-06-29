@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "134736939972",
+    "project_id": "xpensetracker-4af28",
+    "storage_bucket": "xpensetracker-4af28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134736939972:android:455a2e8ccc4230ea54f291",
+        "android_client_info": {
+          "package_name": "com.example.xpensetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134736939972-jttbaa6k0l9i4abotad5gcokj2d6lbvj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUYFDE0aS1VjvrHALVEq2BGxi6fgFLaw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134736939972-jttbaa6k0l9i4abotad5gcokj2d6lbvj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
