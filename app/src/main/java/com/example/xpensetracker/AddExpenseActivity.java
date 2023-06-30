@@ -36,6 +36,29 @@ public class AddExpenseActivity extends AppCompatActivity {
         fstore=FirebaseFirestore.getInstance();
         firebaseAuth=FirebaseAuth.getInstance();
         firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
+
+        type = getIntent().getStringExtra("type");
+
+        if(type.equals("Income")){
+            binding.incomeRadio.setChecked(true);
+
+        }
+        else{
+            binding.expenseRadio.setChecked(true);
+        }
+
+        binding.incomeRadio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                type="Income";
+            }
+        });
+        binding.expenseRadio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                type = "Expense";
+            }
+        });
         binding.expenseRadio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
