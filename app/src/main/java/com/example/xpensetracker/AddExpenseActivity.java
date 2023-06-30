@@ -83,6 +83,7 @@ public class AddExpenseActivity extends AppCompatActivity {
                                 Toast.makeText(AddExpenseActivity.this,"Added Succesfully",Toast.LENGTH_SHORT).show();
                                 binding.note.setText("");
                                 binding.amount.setText("");
+                                binding.category.setText("");
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
