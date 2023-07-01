@@ -7,10 +7,23 @@
     android:padding="20dp"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/refresbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="-3dp"
+        android:paddingLeft="10dp"
+        android:src="@drawable/refresh" />
+
+
     <LinearLayout
+        android:paddingTop="30dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
