@@ -38,6 +38,13 @@ public class ExpenseAdaptor extends RecyclerView.Adapter<ExpenseAdaptor.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         ExpenseModel model = expenseModelArrayList.get(position);
+        String priority= model.getType();
+        if(priority.equals("Expense")){
+            holder.priority.setBackgroundResource(R.drawable.yellow_shape);
+        }
+        else{
+            holder.priority.setBackgroundResource(R.drawable.green_shape);
+        }
         holder.amount.setText(model.getAmount());
         holder.date.setText(model.getDate());
         holder.note.setText(model.getNote());

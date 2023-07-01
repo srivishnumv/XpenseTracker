@@ -95,6 +95,7 @@ public class AddExpenseActivity extends AppCompatActivity {
                 transaction.put("amount",amount);
                 transaction.put("note",note);
                 transaction.put("type",type);
+                transaction.put("date","July 23 2021");
 
 
                 fstore.collection("Expenses").document(firebaseAuth.getUid()).collection("Notes")
