@@ -54,7 +54,7 @@ public class ExpenseAdaptor extends RecyclerView.Adapter<ExpenseAdaptor.MyViewHo
         View priority;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            note=itemView.findViewById(R.id.note_one);
+            note=itemView.findViewById(R.id.note);
             amount=itemView.findViewById(R.id.amount_one);
             date=itemView.findViewById(R.id.date_one);
             priority=itemView.findViewById(R.id.priority);

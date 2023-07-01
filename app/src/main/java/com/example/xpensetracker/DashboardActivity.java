@@ -77,7 +77,7 @@ public class DashboardActivity extends AppCompatActivity {
                         for (DocumentSnapshot ds:task.getResult()){
                             ExpenseModel ExpenseModel = new ExpenseModel(
                                     ds.getString("expenseId"),
-                                    ds.getString("Note"),
+                                    ds.getString("note"),
                                     ds.getString("amount"),
                                     ds.getString("type"),
                                     ds.getString("date"));
