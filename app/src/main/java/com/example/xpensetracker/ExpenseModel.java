@@ -4,37 +4,42 @@ public class ExpenseModel {
 
     private String expenseId;
     private String note;
-    private String category;
+    //private String category;
 
     private String type;
 
 
-    private long amount;
-    private long time;
+    private String amount;
 
-    private String uid;
+    private String date;
+    //private long time;
+
+    // private String uid;
 
 
     public ExpenseModel() {
     }
 
 
-    public ExpenseModel(String expenseId, String note, String category, String type, long amount, long time, String uid) {
+    public ExpenseModel(String expenseId, String note,  String amount, String type, String date) {
         this.expenseId = expenseId;
         this.note = note;
-        this.category = category;
         this.type = type;
         this.amount = amount;
-        this.time = time;
-        this.uid = uid;
+        this.date=date;
+        //this.time = time;
+        // this.uid = uid;
+        // this.category = category;
     }
 
-    public ExpenseModel(String expenseId, String note, String category, long parseLong, long timeInMillis) {
-    }
+    public String getDate(){
+        return date;
 
-    public ExpenseModel(String expenseId, String note, String category, String type, long parseLong, long timeInMillis) {
     }
-
+    public void setDate(String date)
+    {
+        this.date=date;
+    }
     public String getType() {
         return type;
     }
@@ -59,35 +64,14 @@ public class ExpenseModel {
         this.note = note;
     }
 
-    public String getCategory() {
-        return category;
-    }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public long getAmount() {
+    public String getAmount() {
         return amount;
     }
 
-    public void setAmount(long amount) {
+    public void setAmount() {
         this.amount = amount;
     }
 
-    public long getTime() {
-        return time;
-    }
 
-    public void setTime(long time) {
-        this.time = time;
-    }
-
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
-    }
 }
