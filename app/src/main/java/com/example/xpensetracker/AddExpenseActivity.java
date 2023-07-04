@@ -44,7 +44,6 @@ public class AddExpenseActivity extends AppCompatActivity {
 
         if(type.equals("Income")){
             binding.incomeRadio.setChecked(true);
-
         }
         else{
             binding.expenseRadio.setChecked(true);

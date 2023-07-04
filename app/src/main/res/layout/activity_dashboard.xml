@@ -15,7 +15,7 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="-3dp"
         android:paddingLeft="10dp"
-        android:src="@drawable/refresh" />
+        android:src="@drawable/refresh1" />
 
 
     <LinearLayout
