@@ -1,6 +1,7 @@
 package com.example.xpensetracker;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +49,17 @@ public class ExpenseAdaptor extends RecyclerView.Adapter<ExpenseAdaptor.MyViewHo
         holder.amount.setText(model.getAmount());
         holder.date.setText(model.getDate());
         holder.note.setText(model.getNote());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context,UpdateActivity.class);
+                intent.putExtra("id",expenseModelArrayList.get(position).getExpenseId());
+                intent.putExtra("amount",expenseModelArrayList.get(position).getAmount());
+                intent.putExtra("note",expenseModelArrayList.get(position).getNote());
+                intent.putExtra("type",expenseModelArrayList.get(position).getType());
+                context.startActivity(intent);
+            }
+        });
 
     }
 
