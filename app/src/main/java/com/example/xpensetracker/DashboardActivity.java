@@ -11,6 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.xpensetracker.databinding.ActivityDashboardBinding;
+import com.github.mikephil.charting.charts.Chart;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
@@ -71,6 +74,14 @@ public class DashboardActivity extends AppCompatActivity {
 
             }
         });
+        binding.logoutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firebaseAuth.signOut();
+                startActivity(new Intent(DashboardActivity.this,MainActivity.class));
+                finish();
+            }
+        });
         binding.refresbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -128,7 +139,10 @@ public class DashboardActivity extends AppCompatActivity {
         PieDataSet pieDataSet = new PieDataSet(pieEntryList, String.valueOf(sumIncome-sumExpense));
         pieDataSet.setColors(colorsList);
         PieData pieData = new PieData((pieDataSet));
-
+        //PieChart.getDescription().setEnabled(false);
+        //Description des = Chart.getDescription();
+        //des.setEnabled(false);
+        //pieEntryList.setDescription(null);
 
         binding.pieChart.setData(pieData);
         binding.pieChart.invalidate();
