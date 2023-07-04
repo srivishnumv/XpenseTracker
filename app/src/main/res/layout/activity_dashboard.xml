@@ -4,22 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/sky">
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="Dashboard"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/refresbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="-3dp"
+            android:paddingTop="15dp"
+            android:paddingLeft="0dp"
+            android:src="@drawable/refresh1" />
+
 
     <ImageView
-        android:id="@+id/refresbtn"
+        android:id="@+id/logoutbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_alignParentLeft="true"
+android:paddingTop="10dp"
+        android:layout_alignParentRight="true"
         android:layout_marginLeft="-3dp"
         android:paddingLeft="10dp"
-        android:src="@drawable/refresh1" />
+        android:src="@drawable/logout" />
+</RelativeLayout>
 
 
     <LinearLayout
-        android:paddingTop="30dp"
+        android:paddingTop="80dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
