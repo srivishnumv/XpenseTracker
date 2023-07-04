@@ -50,6 +50,7 @@
         android:padding="15dp"
         android:background="@drawable/edit_text_background"
         android:hint="Enter Password"
+        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -74,7 +75,7 @@
         android:id="@+id/goToSignUpScreen"
         android:layout_marginTop="12dp"
         android:gravity="center"
-        android:text="Already Have an Account ? SignUp"
+        android:text="New user ? SignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
