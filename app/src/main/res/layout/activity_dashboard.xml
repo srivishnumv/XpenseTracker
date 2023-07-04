@@ -27,20 +27,22 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="-3dp"
             android:paddingLeft="10dp"
-            android:paddingTop="15dp"
+            android:paddingTop="20dp"
             android:src="@drawable/refresh1" />
 
 
-    <ImageView
-        android:id="@+id/logoutbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-android:paddingTop="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="-3dp"
-        android:paddingLeft="10dp"
-        android:src="@drawable/logout" />
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/logoutbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="-3dp"
+            android:layout_marginRight="6dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/logout" />
+    </RelativeLayout>
 
 
     <LinearLayout
