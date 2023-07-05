@@ -31,6 +31,7 @@ public class UpdateActivity extends AppCompatActivity {
         String  amount=getIntent().getStringExtra("amount");
         String  note=getIntent().getStringExtra("note");
         String  type=getIntent().getStringExtra("type");
+
         binding.amount.setText(amount);
         binding.note.setText(note);
         switch (type){
@@ -48,7 +49,7 @@ public class UpdateActivity extends AppCompatActivity {
             public void onClick(View view) {
                 newType="Income";
                 binding.incomeRadio.setChecked(true);
-                binding.incomeRadio.setChecked(false);
+                binding.expenseRadio.setChecked(false);
             }
         });
         binding.expenseRadio.setOnClickListener(new View.OnClickListener() {
@@ -56,12 +57,13 @@ public class UpdateActivity extends AppCompatActivity {
             public void onClick(View view) {
                 newType="Expense";
                 binding.incomeRadio.setChecked(false);
-                binding.incomeRadio.setChecked(true);
+                binding.expenseRadio.setChecked(true);
             }
         });
         binding.btnupdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String  amount=binding.amount.getText().toString();
                 String  note=binding.note.getText().toString();
 
