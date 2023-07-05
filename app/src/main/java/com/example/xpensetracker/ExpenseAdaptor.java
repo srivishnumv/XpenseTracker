@@ -1,5 +1,4 @@
 package com.example.xpensetracker;
-
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -11,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-
 public class ExpenseAdaptor extends RecyclerView.Adapter<ExpenseAdaptor.MyViewHolder>{
     Context context;
     ArrayList<ExpenseModel> expenseModelArrayList;

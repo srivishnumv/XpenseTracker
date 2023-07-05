@@ -1,6 +1,8 @@
 package com.example.xpensetracker;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -53,6 +55,21 @@ public class DashboardActivity extends AppCompatActivity {
 
         binding.recycler.setLayoutManager(new LinearLayoutManager(this));
         binding.recycler.setHasFixedSize(true);
+        firebaseAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if(firebaseAuth.getCurrentUser()==null){
+                    startActivity(new Intent(DashboardActivity.this,MainActivity.class));
+                    finish();
+                }
+            }
+        });
+        binding.logoutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createSignoutDialog();
+            }
+        });
 
 
         Intent intent=new Intent(DashboardActivity.this,AddExpenseActivity.class);
@@ -74,14 +91,7 @@ public class DashboardActivity extends AppCompatActivity {
 
             }
         });
-        binding.logoutbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                firebaseAuth.signOut();
-                startActivity(new Intent(DashboardActivity.this,MainActivity.class));
-                finish();
-            }
-        });
+
         binding.refresbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,6 +100,25 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
         loadData();
+    }
+
+    private void createSignoutDialog() {
+        AlertDialog.Builder builder=new AlertDialog.Builder(DashboardActivity.this);
+        builder.setTitle("Delete")
+                .setMessage("ARE YOU SURE TO LOGOUT")
+                .setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        firebaseAuth.signOut();
+                    }
+                })
+                .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+        builder.create().show();
     }
 
     private void loadData() {
