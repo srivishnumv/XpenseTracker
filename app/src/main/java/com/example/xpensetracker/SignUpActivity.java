@@ -3,10 +3,13 @@ package com.example.xpensetracker;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+
 
 import com.example.xpensetracker.databinding.ActivitySignUpBinding;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -37,6 +40,7 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email=binding.emailForSignup.getText().toString();
                 String password=binding.passwordForSignup.getText().toString();
+                String number = binding.mobile.getText().toString();
                 if(email.trim().length()<=0 || password.trim().length()<=0)
                 {
                     return;
@@ -45,6 +49,15 @@ public class SignUpActivity extends AppCompatActivity {
                 @Override
                 public void onSuccess(AuthResult authResult) {
                     Toast.makeText(SignUpActivity.this,"User Created",Toast.LENGTH_SHORT).show();
+                    try{
+
+
+                    }catch (Exception e)
+                    {
+                        Toast.makeText(SignUpActivity.this,"Use a registered mobile number to continue",Toast.LENGTH_SHORT).show();
+
+
+                    }
                 }
             })
                     .addOnFailureListener(new OnFailureListener() {

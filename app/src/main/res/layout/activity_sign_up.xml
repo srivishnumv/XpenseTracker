@@ -41,7 +41,15 @@
         android:layout_marginTop="20dp"
         android:padding="15dp"
         android:background="@drawable/edit_text_background"
-        android:hint="Enter Email"
+        android:hint="Enter Email ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/mobile"
+        android:layout_marginTop="12dp"
+        android:padding="15dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Enter mobile number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
