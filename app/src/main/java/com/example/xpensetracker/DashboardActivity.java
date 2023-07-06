@@ -72,7 +72,7 @@ public class DashboardActivity extends AppCompatActivity {
         });
 
 
-        Intent intent=new Intent(DashboardActivity.this,UpdateActivity.class);
+        Intent intent=new Intent(DashboardActivity.this,AddExpenseActivity.class);
         binding.addIncome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

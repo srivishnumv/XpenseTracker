@@ -24,6 +24,7 @@ public class UpdateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding=ActivityUpdateBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         firebaseFirestore=FirebaseFirestore.getInstance();
         firebaseAuth=FirebaseAuth.getInstance();
 
