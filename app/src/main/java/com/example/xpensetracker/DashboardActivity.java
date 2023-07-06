@@ -105,7 +105,7 @@ public class DashboardActivity extends AppCompatActivity {
     private void createSignoutDialog() {
         AlertDialog.Builder builder=new AlertDialog.Builder(DashboardActivity.this);
         builder.setTitle("Delete")
-                .setMessage("ARE YOU SURE TO LOGOUT")
+                .setMessage("Are you sure you want to logout?")
                 .setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
